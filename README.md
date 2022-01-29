@@ -1,11 +1,11 @@
 # README
 
-
 # users
-|  Column              |  Type          |  Options                        |
-|  name                |  string        |  null: false                    |
-|  email               |  string        |  null: false                    |
-|  encrypted_password  |  string        |  null: false                    |
+|  Column              |  Type          |  Options                         |
+| -------------------- | -------------- | -------------------------------- |
+|  name                |  string        |  null: false                     |
+|  email               |  string        |  null: false                     |
+|  encrypted_password  |  string        |  null: false                     |
 
 - has_many :user_threads
 - has_many :threads through: :user_threads
@@ -14,6 +14,7 @@
 
 # user_threads
 |  Column              |  Type           |  Options                        |
+| -------------------- | -------------- | -------------------------------- |
 |  user                |  references     |  null: false, foreign_key: true |
 |  thread              |  references     |  null: false, foreign_key: true |
 
@@ -23,6 +24,7 @@
 
 # threads
 |  Column              |  Type           |  Options                        |
+| -------------------- | -------------- | -------------------------------- |
 |  name                |  string         |  null: false                    |
 
 - has_many :user_threads
@@ -32,6 +34,7 @@
 
 # comments
 |  Column              |  Type           |  Options                        |
+| -------------------- | -------------- | -------------------------------- |
 |  content             |  string         |  null: false                    |
 |  user                |  references     |  null: false, foreign_key: true |
 |  thread              |  references     |  null: false, foreign_key: true |
@@ -42,6 +45,7 @@
 
 # favorites
 |  Column              |  Type           |  Options                        |
+| -------------------- | -------------- | -------------------------------- |
 
 
 
